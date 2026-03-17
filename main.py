@@ -9,6 +9,7 @@ Version:        1.0
 Description:    A big CSV file is divided into many parts.
 Dependencies:   polars==1.38.1
 Usage:          
+python main.py Emisor_PME380607P35.csv -o partes_csv -c 1000000
 """
 
 from __future__ import annotations

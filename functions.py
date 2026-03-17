@@ -37,7 +37,7 @@ def create_batched_reader(
     encoding: str = "utf8",
     has_header: bool = True,
     quote_char: str = '"',
-    infer_schema_length: int = 10000,
+    infer_schema_length: int = 0,
     ignore_errors: bool = False,
     null_values: Optional[str | List[str] | dict[str, str]] = None,
 ) -> pl.io.csv.batched_reader.BatchedCsvReader:
