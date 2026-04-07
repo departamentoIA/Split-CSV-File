@@ -1,9 +1,7 @@
 # Functions.py
 from __future__ import annotations
-
 from pathlib import Path
 from typing import List, Optional
-
 import polars as pl
 
 
@@ -20,7 +18,7 @@ def build_part_path(output_dir: Path, stem: str, part_number: int) -> Path:
     """
     Construye la ruta del archivo de salida para una parte.
     """
-    return output_dir / f"{stem}_part_{part_number:06d}.csv"
+    return output_dir / f"{stem}_part_{part_number:03d}.xlsx"
 
 
 def get_file_stem(input_csv: str | Path) -> str:
@@ -61,9 +59,9 @@ def create_batched_reader(
 
 def write_chunk(df: pl.DataFrame, output_path: Path, include_header: bool = True) -> None:
     """
-    Escribe un DataFrame a CSV.
+    Escribe un DataFrame a XLSX.
     """
-    df.write_csv(file=output_path, include_header=include_header)
+    df.write_excel(output_path, include_header=include_header)
 
 
 def concat_frames(frames: List[pl.DataFrame]) -> pl.DataFrame:
@@ -147,7 +145,7 @@ def process_batches_and_split(
 ) -> dict[str, int]:
     """
     Lee el CSV por lotes usando un BatchedCsvReader, acumula filas y escribe
-    archivos CSV de chunk_size filas.
+    archivos XLSX de chunk_size filas.
 
     Devuelve métricas del proceso.
     """

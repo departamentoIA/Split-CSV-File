@@ -6,10 +6,10 @@ File:           main.py
 Author:         Antonio Arteaga
 Last Updated:   2026-03-17
 Version:        1.0
-Description:    A big CSV file is divided into many parts.
+Description:    A big CSV file is divided into many parts of 1M rows.
 Dependencies:   polars==1.38.1
 Usage:          
-python main.py Emisor_PME380607P35.csv -o partes_csv -c 1000000
+python main.py Emisor_PME380607P35.csv -o partes -c 1000000
 """
 
 from __future__ import annotations
