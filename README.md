@@ -1,5 +1,5 @@
 # Split-CSV-File
-Split a big CSV file into many parts
+Split a big CSV file into many XLSX files of 1 million rows.
 
 ## 🚀 How to run locally
 1. Clone this repository:
@@ -20,5 +20,5 @@ python -m venv env && source env/bin/activate && pip install -r requirements.txt
 ```
 3. Run "main.py" using file 'Emisor_PME380607P35.csv':
 ```
-python main.py Emisor_PME380607P35.csv -o partes_csv -c 1000000
+python main.py Emisor_PME380607P35.csv -o partes -c 1000000
 ```
