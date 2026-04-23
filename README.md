@@ -22,3 +22,8 @@ python -m venv env && source env/bin/activate && pip install -r requirements.txt
 ```
 python main.py Emisor_PME380607P35.csv -o partes -c 1000000
 ```
+## 🎯 Results
+For Windows, use a PowerShell terminal to run "main.py", then the folder "partes" is created with the corresponding XLSX files, as shown in Fig. 1. Remember to activate the virtual enviroment.
+<img width="1433" height="735" alt="image" src="https://github.com/user-attachments/assets/e5b93b1f-fb36-4f3d-9d5f-5631bdbf558e" />
+Fig. 1.
+
